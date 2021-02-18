@@ -3,11 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://headlessbits.com/blog/archives/</loc>
+  </url>
+  
+  <url>
     <loc>https://headlessbits.com/blog/categories/</loc>
   </url>
   
   <url>
     <loc>https://headlessbits.com/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://headlessbits.com/blog/search/</loc>
   </url>
   
   <url>

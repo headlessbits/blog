@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://headlessbits.com/blog/sitemap.xml

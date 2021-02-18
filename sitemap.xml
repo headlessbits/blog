@@ -3,27 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://headlessbits.com/archives/</loc>
+    <loc>https://headlessbits.com/blog/archives/</loc>
   </url>
   
   <url>
-    <loc>https://headlessbits.com/categories/</loc>
+    <loc>https://headlessbits.com/blog/categories/</loc>
   </url>
   
   <url>
-    <loc>https://headlessbits.com/</loc>
+    <loc>https://headlessbits.com/blog/</loc>
   </url>
   
   <url>
-    <loc>https://headlessbits.com/search/</loc>
+    <loc>https://headlessbits.com/blog/search/</loc>
   </url>
   
   <url>
-    <loc>https://headlessbits.com/series/</loc>
+    <loc>https://headlessbits.com/blog/series/</loc>
   </url>
   
   <url>
-    <loc>https://headlessbits.com/tags/</loc>
+    <loc>https://headlessbits.com/blog/tags/</loc>
   </url>
   
 </urlset>

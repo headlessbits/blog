@@ -1,5 +1,4 @@
-#baseURL: "https://headlessbits.com/blog/"
-baseURL: "https://fazlerabbi37.github.io/headlessbits-blog/"
+baseURL: "https://headlessbits.com/blog/"
 title: Headless Bits Blog
 paginate: 5
 theme: PaperMod

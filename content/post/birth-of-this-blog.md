@@ -30,7 +30,7 @@ First the tech stack. This site usages the static site generator [Hugo](https://
 
 Hugo has a huge collections of themes for various purpose. After a some demo visiting and feature comparing, we decided to use [PaperMod](https://github.com/adityatelange/hugo-PaperMod) for our blog.
 
-![PaperMod Screenshot](/image/birth-of-this-blog-screenshot-papermod.png)
+![PaperMod Screenshot](/blog/image/birth-of-this-blog-screenshot-papermod.png)
 
 PaperMod has all the functionalities we need without the extra fat. A nice looking landing page, dark mode (yei, 30% productivity boost!), post organization with category and tag, search. RSS, share article are few major functionalities. The full list of feature and functionalities can be seen in this [GitHub Wiki](https://github.com/adityatelange/hugo-PaperMod/wiki/Features)
 
@@ -44,11 +44,11 @@ First installing Hugo. If we follow the [Install Hugo](https://gohugo.io/getting
 
 Now we need to open our favorite browser and go to [GitHub](https://github.com/) and sign in to our account. Then we will create a repo by clicking the `+` icon to the left of our profile avatar.
 
-![create new repo](/image/birth-of-this-blog-create-new-repo.png)
+![create new repo](/blog/image/birth-of-this-blog-create-new-repo.png)
 
 The repo will have Public visibility. I am creating a new repo for this blog demo and naming it 'blog-demo'. Additionally, we can add a README.md and some description. I am not using any description for the demo. 
 
-![give it a name, public visibility and add a README.md](/image/birth-of-this-blog-name-visibility.png)
+![give it a name, public visibility and add a README.md](/blog/image/birth-of-this-blog-name-visibility.png)
 
 Now we will clone the repo to our local workspace.
 
@@ -126,7 +126,7 @@ It show us the build statics showing something like this
 
 Now let's open the URL in a browser and we should see the basic landing page.
 
-![Headless Bits Blog landing page](/image/birth-of-this-blog-landing.png)
+![Headless Bits Blog landing page](/blog/image/birth-of-this-blog-landing.png)
 
 Now is a great time to commit and push our local changes to remote repo. We can do this with:
 
@@ -218,11 +218,11 @@ let's open `content/post/test.md` and edit the markdown file to add some content
 
 Navigating to our site at [`http://localhost:1313/blog-demo/`](http://localhost:1313/blog-demo/) we see that we have our new test post. It also show that it is a draft post.
 
-![new post](/image/birth-of-this-blog-new-post.png)
+![new post](/blog/image/birth-of-this-blog-new-post.png)
 
 If we click on the Test post we see the post page with our title, description, data, reading length, author and table of content. We also see the content and tag bellow. The share to social feature is working as well.
 
-![post page](/image/birth-of-this-blog-post-page.png)
+![post page](/blog/image/birth-of-this-blog-post-page.png)
 
 We will push this test post to GitHub but before we do that we need to edit test.md and change the metadata draft to false from true. Now we push to GitHub:
 
@@ -236,53 +236,53 @@ We will use [GitHub Action](https://github.com/features/actions) to deploy our s
 
 To generate Personal access token go to Settings from user avatar.
 
-![settings from user avatar](/image/birth-of-this-blog-settings-from-user-avatar.png)
+![settings from user avatar](/blog/image/birth-of-this-blog-settings-from-user-avatar.png)
 
 Then Developer settings at the bottom of the left side menu.
 
-![developer settings](/image/birth-of-this-blog-developer-settings.png)
+![developer settings](/blog/image/birth-of-this-blog-developer-settings.png)
 
 Then click on Personal access token on the left side menu.
 
-![personal access token](/image/birth-of-this-blog-personal-access-token.png)
+![personal access token](/blog/image/birth-of-this-blog-personal-access-token.png)
 
 Now click on Generate new token.
 
-![generate new token](/image/birth-of-this-blog-generate-new-token.png)
+![generate new token](/blog/image/birth-of-this-blog-generate-new-token.png)
 
 On the token generation page give the token a Note. I am using `headless-bits-blog-demo-hugo` as note. Then click on the `repo` checkbox and it would check all the box under `repo`.
  
-![token generation page](/image/birth-of-this-blog-token-generation-page.png)
+![token generation page](/blog/image/birth-of-this-blog-token-generation-page.png)
 
 Now scroll down and click Generate token button. In the next page you should get a 40 character long alpha numeric value which is your token. Copy it and keep it somewhere and don't share with anyone.
 
-![generate token button](/image/birth-of-this-blog-generate-token-button.png)
+![generate token button](/blog/image/birth-of-this-blog-generate-token-button.png)
 
 Let's use the token to configure a secret in out blog-demo GitHub repo. For that we need to go to the Settings tab of the repo.
 
-![repo settings](/image/birth-of-this-blog-repo-settings.png)
+![repo settings](/blog/image/birth-of-this-blog-repo-settings.png)
 
 Scroll down a bit and click on Secrets on the left side menu.
 
-![secrets sub menu](/image/birth-of-this-blog-secrets-sub-menu.png)
+![secrets sub menu](/blog/image/birth-of-this-blog-secrets-sub-menu.png)
 
 Click on New repository secret.
 
-![new repository secret](/image/birth-of-this-blog-new-repository-secret.png)
+![new repository secret](/blog/image/birth-of-this-blog-new-repository-secret.png)
 
 Give it a name like `DEMO_SECRET` and paste the 40 character long alpha numeric personal access token. Then click Add secret.
 
-![add secret](/image/birth-of-this-blog-add-secret.png)
+![add secret](/blog/image/birth-of-this-blog-add-secret.png)
 
 Now finally we will add the GitHub action workflow.
 
 To add GitHub action workflow, click on the Actions tab on the top ribbon of the menu. 
 
-![actions tab](/image/birth-of-this-blog-actions-tab.png)
+![actions tab](/blog/image/birth-of-this-blog-actions-tab.png)
 
 Click on `set up a workflow yourself`. 
 
-![set up a workflow yourself](/image/birth-of-this-blog-set-up-a-workflow-yourself.png)
+![set up a workflow yourself](/blog/image/birth-of-this-blog-set-up-a-workflow-yourself.png)
 
 It will open the online file editor to edit `main.yml` inside `.github/workflows` directory. We can choose to change the file name if needed but I am keeping it as it is. Now we need to Hugo setup actions Getting started -> [Create your workflow](https://github.com/marketplace/actions/hugo-setup#%EF%B8%8F-create-your-workflow) part. Copy the yaml code from `name` to `./public` in it's entirety and paste it in the `main.yml` file. Make sure to change the `branches` to match your main branch and `github_token` to the name given in the 'Add secret' step. For us the `main.yml` file look likes this:
 
@@ -319,47 +319,47 @@ It will open the online file editor to edit `main.yml` inside `.github/workflows
 
 Now click on Start commit button.
 
-![start commit](/image/birth-of-this-blog-start-commit.png)
+![start commit](/blog/image/birth-of-this-blog-start-commit.png)
 
 Write a nice commit message like 'create main.yml to publish site with hugo' and click on Commit new file. 
 
-![commit new file](/image/birth-of-this-blog-commit-new-file.png)
+![commit new file](/blog/image/birth-of-this-blog-commit-new-file.png)
 
 Now click on Code tab.
 
-![code tab](/image/birth-of-this-blog-code-tab.png)
+![code tab](/blog/image/birth-of-this-blog-code-tab.png)
 
 We will see a yellow dot on the left of your commit which means the actions is running.
 
-![the commit with yellow dot](/image/birth-of-this-blog-the-commit-with-yellow-dot.png)
+![the commit with yellow dot](/blog/image/birth-of-this-blog-the-commit-with-yellow-dot.png)
 
 If we click on the yellow dot we see a bit more details and clicking on details takes us to more details page for the action.
 
-![action details](/image/birth-of-this-blog-action-details.png)
+![action details](/blog/image/birth-of-this-blog-action-details.png)
 
 Upon successful completion we see a green check mark on the left side of our commit.
 
-![the green mark of success](/)
+![the green mark of success](/blog/image/birth-of-this-blog-the-green-mark-of-success.png)
 
 Now we need to setup the GitHub Pages. Click on the Settings Tab of the repo.
 
-![settings tab of the repo](/image/birth-of-this-blog-settings-tab-of-the-repo.png)
+![settings tab of the repo](/blog/image/birth-of-this-blog-settings-tab-of-the-repo.png)
 
 Scroll down to GitHub Pages section. For us the site is published at [`http://headlessbits.com/blog-demo/`](http://headlessbits.com/blog-demo/) because we have a site published at [`http://headlessbits.com/`](http://headlessbits.com/blog-demo/) with GitHub Pages and after the first one all repos by default usages the $DOMAIN.TLD/$REPO_NAME format. See this [doc](https://docs.github.com/articles/using-a-custom-domain-with-github-pages/) to know more.
 
-![GitHub Pages domain name](/image/birth-of-this-blog-github-pages-domain-name.png)
+![GitHub Pages domain name](/blog/image/birth-of-this-blog-github-pages-domain-name.png)
 
 Make sure that branch is set to `gh-pages` and folder is `/ (root)`. Click on Enforce HTTPS check box as well.
 
-![GitHub Pages branch and HTTPS](/image/birth-of-this-blog-github-pages-branch-and-https.png)
+![GitHub Pages branch and HTTPS](/blog/image/birth-of-this-blog-github-pages-branch-and-https.png)
 
 Now let's check the site live at [`http://headlessbits.com/blog-demo/`](http://headlessbits.com/blog-demo/).
 
-![yee haw the live site!](/image/birth-of-this-blog-yee-haw-the-live-site.png)
+![yee haw the live site!](/blog/image/birth-of-this-blog-yee-haw-the-live-site.png)
 
 We see our test post is live. Clicking on the box takes us to the post page
 
-![post page in live site](/image/birth-of-this-blog-post-page-in-live-site.png)
+![post page in live site](/blog/image/birth-of-this-blog-post-page-in-live-site.png)
 
 Yeaa! We have successfully deployed our site using Hugo, GitHub Action and GitHub pages!
 

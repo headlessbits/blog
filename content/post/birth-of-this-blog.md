@@ -1,12 +1,12 @@
 ---
 title: "Birth of This Blog"
-date: 2021-02-18T23:21:57+06:00
+date: 2021-02-20T23:21:57+06:00
 description: "How this blog site came to existence"
 tags: ["misc"]
 author: "Fazle Rabbi"
 showToc: true
 TocOpen: false
-draft: true
+draft: false
 hidemeta: false
 comments: false
 disableHLJS: true # to disable highlightjs

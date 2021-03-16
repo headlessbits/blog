@@ -6,7 +6,7 @@ tags: ["misc"]
 author: "Fazle Rabbi"
 showToc: true
 TocOpen: false
-draft: true
+draft: false
 hidemeta: false
 comments: false
 disableHLJS: true # to disable highlightjs
